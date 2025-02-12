@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="css/icons/fonts/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/scripts.js"></script>
+</head>
+<body>
+    <header>
+		<nav>
+			<div class="nav-1">
+				ROB360
+			</div>
+			<div class="nav-2">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="service.html">SERVICES</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+                     <li><a href="signup.html">REGISTER</a></li>
+				</ul>
+			</div>
+			<div class="ham_button">
+				<div class="button_open">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+				<div class="button_close">
+					<i class="fa-solid fa-xmark"></i>
+				</div>
+			</div>
+		</nav>
+	</header>
+    <section class="register_form">
+    <section id="home">
+        <h1>Welcome to Our Website</h1>
+       
+    </section>
+    
+    <section id="register">
+        <h2>User Registration</h2>
+        <form  action="includes/signin.inc.php" method="POST" class="form_input" id="registrationForm">
+            <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Fullname" required><br>
+             </div>
+
+             <div>
+            <label for="regNumber">Registration Number:</label>
+            <input type="text" id="regNumber" name="regNumber" pattern="BCS-\d{2}-\d{4}-\d{4}" title="Format: BCS-00-0000-0000" placeholder="Registration Number" required><br>
+            </div>
+
+            <div>
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+            </div>
+            
+            <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Email"><br>
+        </div>
+            <div>
+            <label for="region">Region:</label>
+            <select id="region" name="region" required>
+                <option value="">Select Region</option>
+                <!-- Options will be loaded dynamically -->
+            </select><br>
+        </div>
+            <div>
+            <label for="district">District:</label>
+            <select id="district" name="district" required>
+                <option value="">Select District</option>
+                <!-- Options will be loaded dynamically -->
+            </select><br>
+        </div>
+            <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="password"><br>
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder=" confirmPassword"><br>
+        </div>
+        <div class="btn">
+            <input type="submit" value="Register">
+        </div>
+        </form>
+        <div id="message"></div>
+    </section>
+</section>
+    
+   
+    
+    <script src="javascript/regions.js"></script>
+</body>
+</html>
+
+
